@@ -19,7 +19,7 @@ public class VotingService {
     }
 
     public void inputAnswer(Student student){
-        // store student
+        // Store student id and print out the unique id and the answer that student choose
         students.put(student.getStudentID(), student);
         System.out.println("Student ID: " +  student.getStudentID() +
                 "\nAnswer(s): " + student.getAnswers());
@@ -28,7 +28,7 @@ public class VotingService {
     public void printStatistics() {
         Map<String, Integer> stats = new HashMap<>();
         // Stats on the answer chosen by students
-        // use getOrDefault method in HashMap get the value mapped with specified key
+        // Use getOrDefault method in HashMap get the value mapped with specified key
         for(Student student : students.values()){
             for(String answer : student.getAnswers()){
                 stats.put(answer, stats.getOrDefault(answer, 0) + 1);

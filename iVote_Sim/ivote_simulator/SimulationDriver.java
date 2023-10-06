@@ -42,8 +42,9 @@ public class SimulationDriver {
             // if not only allow one answer
             int numAnswers= question.isMultipleQ() ? random.nextInt(question.getChoices().size()) + 1 :1;
             List<String> choices = new ArrayList<>(question.getChoices());
-            for(int j = 0; j < numAnswers; j++ ){
-                // 4. submit all students answers to ivote service
+            for(int pickAnswer = 0; pickAnswer < numAnswers; pickAnswer++ ){
+                // 4. Submit all students answers to ivote service
+                // The answer are randomly generated
                 answers.add(choices.get(random.nextInt(choices.size())));
             }
             student.setAnswers(answers);

@@ -9,12 +9,12 @@ public class MultipleQuestion implements Question {
         this.question = question;
         this.choices = choices;
     }
-
+    // Get question
     @Override
     public String getQuestion() {
         return question;
     }
-
+    // Set answer choices
     @Override
     public Set<String> getChoices() {
         return choices;
